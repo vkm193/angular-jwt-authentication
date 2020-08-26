@@ -1,0 +1,49 @@
+<form class="form-horizontal">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Register</legend>
+      </div>
+      <div class="control-group">
+        <!-- First Name -->
+        <label class="control-label"  for="firstname">First Name</label>
+        <div class="controls">
+          <input type="text" id="firstname" name="firstname" placeholder="" class="input-xlarge" [(ngModel)]="registerModel.firstName">
+          <p class="help-block">First name can contain any letters or numbers, without spaces</p>
+        </div>
+      </div>
+      <div class="control-group">
+        <!-- Last Name -->
+        <label class="control-label"  for="lastname">Last Name</label>
+        <div class="controls">
+          <input type="text" id="lastname" name="lastname" placeholder="" class="input-xlarge" [(ngModel)]="registerModel.lastName">
+          <p class="help-block">Last name can contain any letters or numbers, without spaces</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+        <!-- E-mail -->
+        <label class="control-label" for="email">E-mail</label>
+        <div class="controls">
+          <input type="text" id="email" name="email" placeholder="" class="input-xlarge" [(ngModel)]="registerModel.email">
+          <p class="help-block">Please provide your E-mail</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+        <!-- Password-->
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+          <input type="password" id="password" name="password" placeholder="" class="input-xlarge" [(ngModel)]="registerModel.passwordHash">
+          <p class="help-block">Password should be at least 6 characters (1 Uppercase, 1 lower case, 1 number, 1 special char)</p>
+        </div>
+      </div>
+   
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-success" (click) = "onRegister()">Register</button>
+          <button class="btn btn-link" routerLink="/account/login">Go to login</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
